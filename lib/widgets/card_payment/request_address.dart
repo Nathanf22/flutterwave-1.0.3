@@ -118,7 +118,6 @@ class _RequestAddressState extends State<RequestAddress> {
                           // borderRadius: BorderRadius.circular(28),),),
                           foregroundColor: MaterialStateProperty.all<Color>(Colors.orangeAccent)
                         ),
-                        color: Colors.orangeAccent,
                         child: Text(
                           "CONTINUE PAYMENT",
                           style: TextStyle(color: Colors.white),

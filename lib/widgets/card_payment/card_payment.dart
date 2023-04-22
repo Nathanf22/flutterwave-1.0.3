@@ -28,7 +28,7 @@ class CardPayment extends StatefulWidget {
 class _CardPaymentState extends State<CardPayment>
     implements CardPaymentListener {
   final _cardFormKey = GlobalKey<FormState>();
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldMessengerState> _scaffoldKey = GlobalKey<ScaffoldMessengerState>();
 
   BuildContext? loadingDialogContext;
 
@@ -172,9 +172,11 @@ class _CardPaymentState extends State<CardPayment>
                   width: double.infinity,
                   height: 45,
                   margin: EdgeInsets.fromLTRB(30, 20, 30, 30),
-                  child: RaisedButton(
+                  child: ElevatedButton(
                     onPressed: this._onCardFormClick,
-                    color: Colors.orangeAccent,
+                    style: ButtonStyle(
+                      foregroundColor: MaterialStateProperty.all<Color>(Colors.orangeAccent)
+                    ),
                     child: Text(
                       "PAY",
                       style: TextStyle(color: Colors.white),

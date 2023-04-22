@@ -60,9 +60,14 @@ class _RequestOTPState extends State<RequestOTP> {
                   margin: EdgeInsets.all(20),
                   width: double.infinity,
                   height: 50,
-                  child: RaisedButton(
+                  child: ElevatedButton(
                     onPressed: this._continuePayment,
-                    color: Colors.orangeAccent,
+                    style: ButtonStyle(
+                          // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          //   RoundedRectangleBorder(
+                          // borderRadius: BorderRadius.circular(28),),),
+                          foregroundColor: MaterialStateProperty.all<Color>(Colors.orangeAccent)
+                        ),
                     child: Text(
                       "CONTINUE PAYMENT",
                       style: TextStyle(color: Colors.white),

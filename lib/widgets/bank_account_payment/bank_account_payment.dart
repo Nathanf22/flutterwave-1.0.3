@@ -29,7 +29,7 @@ class PayWithBankAccountState extends State<PayWithBankAccount> {
   Future<List<Bank>>? banks;
 
   final _formKey = GlobalKey<FormState>();
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldMessengerState> _scaffoldKey = new GlobalKey<ScaffoldMessengerState>();
 
   final TextEditingController _phoneNumberController = TextEditingController();
   final TextEditingController _accountNumberController =

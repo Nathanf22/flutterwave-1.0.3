@@ -22,7 +22,7 @@ class _PayWithMpesaState extends State<PayWithMpesa> {
   final TextEditingController _phoneNumberController = TextEditingController();
   final TextEditingController networkController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldMessengerState> _scaffoldKey = new GlobalKey<ScaffoldMessengerState>();
 
   BuildContext? loadingDialogContext;
 
@@ -59,9 +59,14 @@ class _PayWithMpesaState extends State<PayWithMpesa> {
                     width: double.infinity,
                     height: 50,
                     margin: EdgeInsets.fromLTRB(0, 40, 0, 20),
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: this._onPayPressed,
-                      color: Colors.orange,
+                       style: ButtonStyle(
+                        // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        //   RoundedRectangleBorder(
+                        // borderRadius: BorderRadius.circular(28),),),
+                        foregroundColor: MaterialStateProperty.all<Color>(Colors.orange)
+                      ),
                       child: Text(
                         "Pay with Mpesa",
                         textAlign: TextAlign.center,

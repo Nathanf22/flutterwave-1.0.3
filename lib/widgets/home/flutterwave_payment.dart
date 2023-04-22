@@ -28,7 +28,7 @@ class FlutterwaveUI extends StatefulWidget {
 }
 
 class _FlutterwaveUIState extends State<FlutterwaveUI> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldMessengerState> _scaffoldKey = GlobalKey<ScaffoldMessengerState>();
 
   @override
   Widget build(BuildContext context) {

@@ -23,7 +23,7 @@ class PayWithBankTransfer extends StatefulWidget {
 }
 
 class _PayWithBankTransferState extends State<PayWithBankTransfer> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldMessengerState> _scaffoldKey = new GlobalKey<ScaffoldMessengerState>();
 
   BuildContext? loadingDialogContext;
 

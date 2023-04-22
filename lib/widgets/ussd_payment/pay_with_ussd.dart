@@ -22,7 +22,7 @@ class PayWithUssd extends StatefulWidget {
 }
 
 class _PayWithUssdState extends State<PayWithUssd> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldMessengerState> _scaffoldKey = new GlobalKey<ScaffoldMessengerState>();
 
   BuildContext? loadingDialogContext;
   TextEditingController controller = TextEditingController();
